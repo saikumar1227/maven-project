@@ -4,7 +4,7 @@ pipeline{
 		stage('Build'){
 			steps{
 				sh 'echo $PATH'
-				sh 'mvn clean package'
+				mvn clean package
 			}
 			post{
 				success{
