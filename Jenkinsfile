@@ -3,7 +3,7 @@ pipeline{
 	stages{
 		stage('Build'){
 			steps{
-				sh 'echo $PATH'
+				sh 'export PATH="/opt/apache-maven-3.5.2/bin:$PATH"'
 				sh 'mvn clean package'
 			}
 			post{
